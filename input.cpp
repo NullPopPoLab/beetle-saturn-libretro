@@ -175,22 +175,22 @@ static const unsigned input_map_pad[ INPUT_MAP_PAD_SIZE ] =
 {
 	// libretro input				 at position	|| maps to Saturn		on bit
 	//-----------------------------------------------------------------------------
-	RETRO_DEVICE_ID_JOYPAD_L,		// L1			-> Z					0
-	RETRO_DEVICE_ID_JOYPAD_X,		// X(top)		-> Y					1
-	RETRO_DEVICE_ID_JOYPAD_Y,		// Y(left)		-> X					2
-	RETRO_DEVICE_ID_JOYPAD_R2,		// R2			-> R					3
+	RETRO_DEVICE_ID_JOYPAD_X,		// L1			-> Z					0
+	RETRO_DEVICE_ID_JOYPAD_Y,		// X(top)		-> Y					1
+	RETRO_DEVICE_ID_JOYPAD_Z,		// Y(left)		-> X					2
+	RETRO_DEVICE_ID_JOYPAD_R,		// R2			-> R					3
 	RETRO_DEVICE_ID_JOYPAD_UP,		// Pad-Up		-> Pad-Up				4
 	RETRO_DEVICE_ID_JOYPAD_DOWN,	// Pad-Down		-> Pad-Down				5
 	RETRO_DEVICE_ID_JOYPAD_LEFT,	// Pad-Left		-> Pad-Left				6
 	RETRO_DEVICE_ID_JOYPAD_RIGHT,	// Pad-Right	-> Pad-Right			7
-	RETRO_DEVICE_ID_JOYPAD_A,		// A(right)		-> B					8
-	RETRO_DEVICE_ID_JOYPAD_R,		// R1			-> C					9
-	RETRO_DEVICE_ID_JOYPAD_B,		// B(down)		-> A					10
+	RETRO_DEVICE_ID_JOYPAD_B,		// A(right)		-> B					8
+	RETRO_DEVICE_ID_JOYPAD_A,		// R1			-> C					9
+	RETRO_DEVICE_ID_JOYPAD_C,		// B(down)		-> A					10
 	RETRO_DEVICE_ID_JOYPAD_START,	// Start		-> Start				11
 };
 
 static const unsigned input_map_pad_left_shoulder =
-	RETRO_DEVICE_ID_JOYPAD_L2;		// L2			-> L					15
+	RETRO_DEVICE_ID_JOYPAD_L;		// L2			-> L					15
 
 /* 3D Control Pad */
 enum { INPUT_MAP_3D_PAD_SIZE = 11 };
@@ -202,13 +202,13 @@ static const unsigned input_map_3d_pad[ INPUT_MAP_3D_PAD_SIZE ] =
 	RETRO_DEVICE_ID_JOYPAD_DOWN,	// Pad-Down		-> Pad-Down				1
 	RETRO_DEVICE_ID_JOYPAD_LEFT,	// Pad-Left		-> Pad-Left				2
 	RETRO_DEVICE_ID_JOYPAD_RIGHT,	// Pad-Right	-> Pad-Right			3
-	RETRO_DEVICE_ID_JOYPAD_A,		// A(right)		-> B					4
-	RETRO_DEVICE_ID_JOYPAD_R,		// R1			-> C					5
-	RETRO_DEVICE_ID_JOYPAD_B,		// B(down)		-> A					6
+	RETRO_DEVICE_ID_JOYPAD_B,		// A(right)		-> B					4
+	RETRO_DEVICE_ID_JOYPAD_A,		// R1			-> C					5
+	RETRO_DEVICE_ID_JOYPAD_C,		// B(down)		-> A					6
 	RETRO_DEVICE_ID_JOYPAD_START,	// Start		-> Start				7
-	RETRO_DEVICE_ID_JOYPAD_L,		// L1			-> Z					8
-	RETRO_DEVICE_ID_JOYPAD_X,		// X(top)		-> Y					9
-	RETRO_DEVICE_ID_JOYPAD_Y,		// Y(left)		-> X					10
+	RETRO_DEVICE_ID_JOYPAD_X,		// L1			-> Z					8
+	RETRO_DEVICE_ID_JOYPAD_Y,		// X(top)		-> Y					9
+	RETRO_DEVICE_ID_JOYPAD_Z,		// Y(left)		-> X					10
 };
 
 static const unsigned input_map_3d_pad_mode_switch =
@@ -221,19 +221,19 @@ static const unsigned input_map_wheel[ INPUT_MAP_WHEEL_SIZE ] =
 {
 	// libretro input				 at position	|| maps to Saturn		on bit
 	//-----------------------------------------------------------------------------
-	RETRO_DEVICE_ID_JOYPAD_A,		// A(right)		-> B					4
-	RETRO_DEVICE_ID_JOYPAD_R,		// R1			-> C					5
-	RETRO_DEVICE_ID_JOYPAD_B,		// B(down)		-> A					6
+	RETRO_DEVICE_ID_JOYPAD_B,		// A(right)		-> B					4
+	RETRO_DEVICE_ID_JOYPAD_A,		// R1			-> C					5
+	RETRO_DEVICE_ID_JOYPAD_C,		// B(down)		-> A					6
 	RETRO_DEVICE_ID_JOYPAD_START,	// Start		-> Start				7
-	RETRO_DEVICE_ID_JOYPAD_L,		// L1			-> Z					8
-	RETRO_DEVICE_ID_JOYPAD_X,		// X(top)		-> Y					9
-	RETRO_DEVICE_ID_JOYPAD_Y,		// Y(left)		-> X					10
+	RETRO_DEVICE_ID_JOYPAD_X,		// L1			-> Z					8
+	RETRO_DEVICE_ID_JOYPAD_Y,		// X(top)		-> Y					9
+	RETRO_DEVICE_ID_JOYPAD_Z,		// Y(left)		-> X					10
 };
 
 static const unsigned input_map_wheel_shift_left =
-	RETRO_DEVICE_ID_JOYPAD_L2;
+	RETRO_DEVICE_ID_JOYPAD_L;
 static const unsigned input_map_wheel_shift_right =
-	RETRO_DEVICE_ID_JOYPAD_R2;
+	RETRO_DEVICE_ID_JOYPAD_R;
 
 /* Mission Stick */
 enum { INPUT_MAP_MISSION_SIZE = 8 };
@@ -241,18 +241,18 @@ static const unsigned input_map_mission[ INPUT_MAP_MISSION_SIZE ] =
 {
 	// libretro input				 at position	|| maps to Saturn		on bit
 	//-----------------------------------------------------------------------------
-	RETRO_DEVICE_ID_JOYPAD_A,		// A(right)		-> B					0
-	RETRO_DEVICE_ID_JOYPAD_R,		// R1			-> C					1
-	RETRO_DEVICE_ID_JOYPAD_B,		// B(down)		-> A					2
+	RETRO_DEVICE_ID_JOYPAD_B,		// A(right)		-> B					0
+	RETRO_DEVICE_ID_JOYPAD_A,		// R1			-> C					1
+	RETRO_DEVICE_ID_JOYPAD_C,		// B(down)		-> A					2
 	RETRO_DEVICE_ID_JOYPAD_START,	// Start		-> Start				3
-	RETRO_DEVICE_ID_JOYPAD_L,		// L1			-> Z					4
-	RETRO_DEVICE_ID_JOYPAD_X,		// X(top)		-> Y					5
-	RETRO_DEVICE_ID_JOYPAD_Y,		// Y(left)		-> X					6
-	RETRO_DEVICE_ID_JOYPAD_R2,		// R2			-> R					7
+	RETRO_DEVICE_ID_JOYPAD_X,		// L1			-> Z					4
+	RETRO_DEVICE_ID_JOYPAD_Y,		// X(top)		-> Y					5
+	RETRO_DEVICE_ID_JOYPAD_Z,		// Y(left)		-> X					6
+	RETRO_DEVICE_ID_JOYPAD_R,		// R2			-> R					7
 };
 
 static const unsigned input_map_mission_left_shoulder =
-	RETRO_DEVICE_ID_JOYPAD_L2;		// L2			-> L					15
+	RETRO_DEVICE_ID_JOYPAD_L;		// L2			-> L					15
 
 static const unsigned input_map_mission_throttle_latch =
 	RETRO_DEVICE_ID_JOYPAD_R3;
@@ -449,16 +449,19 @@ void input_init_env( retro_environment_t _environ_cb )
 		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_DOWN,  "D-Pad Down" },								\
 		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_LEFT,  "D-Pad Left" },								\
 		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_RIGHT, "D-Pad Right" },								\
-		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_B,     "A Button" },								\
-		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_A,     "B Button" },								\
-		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R,     "C Button" },								\
-		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Y,     "X Button" },								\
-		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_X,     "Y Button" },								\
-		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L,     "Z Button" },								\
-		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L2,    "L Button" },								\
-		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R2,    "R Button" },								\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_C,     "A Button" },								\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_B,     "B Button" },								\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_A,     "C Button" },								\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Z,     "X Button" },								\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Y,     "Y Button" },								\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_X,     "Z Button" },								\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L,     "L Button" },								\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R,     "R Button" },								\
 		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_START, "Start Button" },							\
 		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, "Mode Switch" },							\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L2,    "Mission Stick Left Trigger" },							\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R2,    "Mission Stick Right Trigger" },							\
+		{ _user, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R3,    "Mission Stick Latch" },							\
 		{ _user, RETRO_DEVICE_ANALOG, RETRO_DEVICE_INDEX_ANALOG_LEFT, RETRO_DEVICE_ID_ANALOG_X, "Analog X" },		\
 		{ _user, RETRO_DEVICE_ANALOG, RETRO_DEVICE_INDEX_ANALOG_LEFT, RETRO_DEVICE_ID_ANALOG_Y, "Analog Y" },		\
 		{ _user, RETRO_DEVICE_ANALOG, RETRO_DEVICE_INDEX_ANALOG_RIGHT, RETRO_DEVICE_ID_ANALOG_X, "Analog X (Right)" },	\
@@ -547,7 +550,7 @@ void input_update(bool supports_bitmasks,
 	for ( unsigned iplayer = 0; iplayer < players; ++iplayer )
 	{
 		INPUT_DATA* p_input = &(input_data[ iplayer ]);
-      int16_t ret;
+      int32_t ret;
 
 		// reset input
 		p_input->buttons = 0;
@@ -574,7 +577,7 @@ void input_update(bool supports_bitmasks,
 				}
 
 				// .. the left trigger on the Saturn is a special case since there's a gap in the bits.
-            if (ret & (1 << RETRO_DEVICE_ID_JOYPAD_L2))
+            if (ret & (1 << RETRO_DEVICE_ID_JOYPAD_L))
                p_input->buttons |= ( 1 << 15 );
          }
          else
@@ -705,8 +708,8 @@ void input_update(bool supports_bitmasks,
 
 				// mednafen wants 0 - 65535
 				uint16_t l_trigger, r_trigger;
-				l_trigger = get_analog_trigger( input_state_cb, iplayer, RETRO_DEVICE_ID_JOYPAD_L2 );
-				r_trigger = get_analog_trigger( input_state_cb, iplayer, RETRO_DEVICE_ID_JOYPAD_R2 );
+				l_trigger = get_analog_trigger( input_state_cb, iplayer, RETRO_DEVICE_ID_JOYPAD_L );
+				r_trigger = get_analog_trigger( input_state_cb, iplayer, RETRO_DEVICE_ID_JOYPAD_R );
 
 
 				//
