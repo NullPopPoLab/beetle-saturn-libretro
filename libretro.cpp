@@ -2410,17 +2410,35 @@ const char *MDFN_MakeFName(MakeFName_Type type, int id1, const char *cd1)
    switch (type)
    {
       case MDFNMKF_SAV:
+         if(shared_intmemory)
          snprintf(fullpath, sizeof(fullpath), "%s%c%s.%s",
                retro_save_directory,
                retro_slash,
-               (!shared_intmemory) ? retro_cd_base_name : "mednafen_saturn_libretro_shared",
+               "mednafen_backup",
+               cd1);
+         else
+         snprintf(fullpath, sizeof(fullpath), "%s%c%s%c%s.%s",
+               retro_save_directory,
+               retro_slash,
+               retro_cd_base_name,
+               retro_slash,
+               "mednafen_backup",
                cd1);
          break;
       case MDFNMKF_CART:
+         if(shared_intmemory)
          snprintf(fullpath, sizeof(fullpath), "%s%c%s.%s",
                retro_save_directory,
                retro_slash,
-               (!shared_backup) ? retro_cd_base_name : "mednafen_saturn_libretro_shared",
+               "mednafen_backup",
+               cd1);
+         else
+         snprintf(fullpath, sizeof(fullpath), "%s%c%s%c%s.%s",
+               retro_save_directory,
+               retro_slash,
+               retro_cd_base_name,
+               retro_slash,
+               "mednafen_backup",
                cd1);
          break;
       default:
