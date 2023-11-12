@@ -1080,7 +1080,7 @@ static bool InitCommon(const unsigned cpucache_emumode, const unsigned cart_type
 
    {
       char bios_path[4096];
-      snprintf(bios_path, sizeof(bios_path), "%s%csaturn%c%s", retro_base_directory, retro_slash, retro_slash, bios_filename);
+      snprintf(bios_path, sizeof(bios_path), "%s%c%s", retro_base_directory, retro_slash, bios_filename);
 
       RFILE *BIOSFile = filestream_open(bios_path,
             RETRO_VFS_FILE_ACCESS_READ,
