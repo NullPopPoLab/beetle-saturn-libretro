@@ -29,7 +29,7 @@
 #include "input.h"
 #include "disc.h"
 
-#define CUSTOM_VERSION "+NC41"
+#define CUSTOM_VERSION "+NCA41"
 
 #define MEDNAFEN_CORE_NAME                   "Beetle Saturn"
 #define MEDNAFEN_CORE_VERSION                "v1.29.0"
