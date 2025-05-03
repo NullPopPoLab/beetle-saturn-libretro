@@ -29,6 +29,7 @@
 #include "input.h"
 #include "disc.h"
 
+#define CUSTOM_VERSION "+NC41"
 
 #define MEDNAFEN_CORE_NAME                   "Beetle Saturn"
 #define MEDNAFEN_CORE_VERSION                "v1.29.0"
@@ -860,7 +861,7 @@ void retro_get_system_info(struct retro_system_info *info)
 #endif
    memset(info, 0, sizeof(*info));
    info->library_name     = MEDNAFEN_CORE_NAME;
-   info->library_version  = MEDNAFEN_CORE_VERSION GIT_VERSION;
+   info->library_version  = MEDNAFEN_CORE_VERSION GIT_VERSION CUSTOM_VERSION;
    info->need_fullpath    = true;
    info->valid_extensions = MEDNAFEN_CORE_EXTENSIONS;
    info->block_extract    = false;
