@@ -209,7 +209,7 @@ static const unsigned input_map_3d_pad[ INPUT_MAP_3D_PAD_SIZE ] =
 	RETRO_DEVICE_ID_JOYPAD_Z,		// Y(left)		-> X					10
 };
 
-static const unsigned input_map_3d_pad_mode_switch = RETRO_DEVICE_ID_JOYPAD_SELECT;
+static const unsigned input_map_3d_pad_mode_switch = RETRO_DEVICE_ID_JOYPAD_MENU;
 
 /* Arcade Racer (wheel) */
 enum { INPUT_MAP_WHEEL_BITSHIFT = 4 };
@@ -1174,8 +1174,8 @@ void input_update( retro_input_state_t input_state_cb )
 
 				// mednafen wants 0 - 65535
 				uint16_t l_trigger, r_trigger;
-				l_trigger = get_analog_trigger( input_state_cb, iplayer, RETRO_DEVICE_ID_JOYPAD_L );
-				r_trigger = get_analog_trigger( input_state_cb, iplayer, RETRO_DEVICE_ID_JOYPAD_R );
+				l_trigger = get_analog_trigger( input_state_cb, iplayer, RETRO_DEVICE_ID_JOYPAD_L2 );
+				r_trigger = get_analog_trigger( input_state_cb, iplayer, RETRO_DEVICE_ID_JOYPAD_R2 );
 
 
 				//
