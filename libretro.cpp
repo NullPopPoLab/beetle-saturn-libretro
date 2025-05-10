@@ -28,6 +28,7 @@
 #include "libretro_settings.h"
 #include "input.h"
 #include "disc.h"
+#include "file/file_path.h"
 
 #define CUSTOM_VERSION "+NCA41"
 
@@ -207,6 +208,11 @@ void retro_init(void)
       log_cb(RETRO_LOG_WARN, "Save directory is not defined. Fallback on using SYSTEM directory ...\n");
       snprintf(retro_save_directory, sizeof(retro_save_directory), "%s", retro_base_directory);
    }
+
+	std::string shared_save_dir=std::string(retro_save_directory)+RETRO_SLASH+"!beetle-saturn";
+	if(!path_is_directory(shared_save_dir.c_str())){
+		path_mkdir(shared_save_dir.c_str());
+	}
 
    disc_init( environ_cb );
 
@@ -1074,9 +1080,9 @@ const char *MDFN_MakeFName(MakeFName_Type type, int id1, const char *cd1)
    {
       case MDFNMKF_SAV:
          if(shared_intmemory)
-         snprintf(fullpath, sizeof(fullpath), "%s" RETRO_SLASH "%s.%s",
+         snprintf(fullpath, sizeof(fullpath), "%s" RETRO_SLASH "!beetle-saturn" RETRO_SLASH "%s.%s",
                retro_save_directory,
-               "mednafen_saturn_libretro_shared",
+               "mednafen_backup",
                cd1);
          else
          snprintf(fullpath, sizeof(fullpath), "%s" RETRO_SLASH "%s" RETRO_SLASH "%s.%s",
@@ -1087,9 +1093,9 @@ const char *MDFN_MakeFName(MakeFName_Type type, int id1, const char *cd1)
          break;
       case MDFNMKF_CART:
          if(shared_backup)
-         snprintf(fullpath, sizeof(fullpath), "%s" RETRO_SLASH "%s.%s",
+         snprintf(fullpath, sizeof(fullpath), "%s" RETRO_SLASH "!beetle-saturn" RETRO_SLASH "%s.%s",
                retro_save_directory,
-               "mednafen_saturn_libretro_shared",
+               "mednafen_backup",
                cd1);
          else
          snprintf(fullpath, sizeof(fullpath), "%s" RETRO_SLASH "%s" RETRO_SLASH "%s.%s",
